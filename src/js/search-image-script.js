@@ -11,12 +11,12 @@ import 'basiclightbox/src/styles/main.scss';
 class ImageSearcher {
     constructor() {
         this.key = `20337553-a297616fd4599e165a4d47360`,
-            this.pageNumber = 1,
-            this.refs = {
-                bodyRef: document.querySelector('body'),
-                sectionRef: document.querySelector('.section'),
-                buttonRef: document.querySelector('.load-more-button')
-            }
+        this.pageNumber = 1,
+        this.refs = {
+            bodyRef: document.querySelector('body'),
+            sectionRef: document.querySelector('.section'),
+            buttonRef: document.getElementById('load-button')
+        }
     }
 
     imageResultRequest(query) {
@@ -119,9 +119,6 @@ class ImageSearcher {
     }
 }
 
-
 const searchByQuery = new ImageSearcher;
 
 searchByQuery.runSearch();
-
-

@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const paths = require('../utils/paths');
+const webpack = require('webpack');
 
 module.exports = env => ({
   devtool: 'cheap-eval-source-map',
@@ -22,6 +23,11 @@ module.exports = env => ({
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+    })
   ],
   devServer: {
     contentBase: paths.BUILD_DIR,

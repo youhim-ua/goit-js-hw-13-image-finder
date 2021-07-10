@@ -1,3 +1,5 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -21,7 +23,6 @@ body {
   max-width: 1600px;
   margin: 0 auto;
   padding: 10px;
-  /* background-image: url('./image/333.jpg'); */
   background-repeat: repeat;
 }
 
@@ -29,7 +30,7 @@ body {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px; /* Preferred icon size */
+  font-size: 24px;
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -53,21 +54,12 @@ body {
 .search-form input {
   display: block;
   width: 350px;
-  height: 40px;
+  height: 35px;
   margin: 0 auto;
   padding: 0 15px;
-  border: 2px solid rgb(65, 212, 139);
   border-radius: 25px;
-  outline: none;
-  transition: all 400ms 0s ease-in-out;
   font-size: 18px;
   font-weight: 400;
-
-  &:hover,
-  &:focus {
-    border-color: rgba(197, 42, 235, 0.8);
-    transition: all 400ms 0s ease-in-out;
-  }
 
   &::placeholder {
     font-size: 18px;
@@ -85,15 +77,22 @@ body {
   &-item {
     margin-bottom: 30px;
     list-style: none;
+    cursor: zoom-in;
   }
 }
 
 .photo-card {
   position: relative;
   transition: all 400ms 0s ease-in-out;
+  -webkit-box-shadow: 7px 7px 5px -5px rgba(34, 60, 80, 0.6);
+  -moz-box-shadow: 7px 7px 5px -5px rgba(34, 60, 80, 0.6);
+  box-shadow: 7px 7px 5px -5px rgba(34, 60, 80, 0.6);
 
   &:hover {
-    box-shadow: 0px 0px 4px 5px rgba(197, 42, 235, 0.8);
+    -webkit-box-shadow: 12px 12px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 12px 12px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 12px 12px 5px -5px rgba(34, 60, 80, 0.6);
+    transform: translate(-5px, -5px);
     transition: all 400ms 0s ease-in-out;
   }
 }
@@ -140,8 +139,6 @@ body {
   border: 0;
   border-radius: 25px;
   outline: none;
-  font-size: 14px;
-  font-weight: 400;
   transition: all 400ms 0s ease-in-out;
 
   &:hover {
@@ -150,11 +147,24 @@ body {
   }
 }
 
+.btn-primary {
+  display: block;
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .button-container {
   position: sticky;
   display: flex;
-  justify-content: flex-end;
+  width: 105px;
+  float: right;
   bottom: 20px;
+}
+
+.button-container button {
+  display: flex;
+  align-items: center;
 }
 
 .hide-button {
@@ -165,17 +175,11 @@ body {
 .down-button {
   width: 50px;
   height: 50px;
-  border: 0;
   border-radius: 50%;
-  outline: none;
-  font-size: 14px;
-  font-weight: 400;
-  background-color: rgb(65, 212, 139);
   transition: all 400ms 0s ease-in-out;
 
   &:hover,
   &:hover {
-    background-color: rgba(197, 42, 235, 0.431);
     transition: all 400ms 0s ease-in-out;
   }
 }
